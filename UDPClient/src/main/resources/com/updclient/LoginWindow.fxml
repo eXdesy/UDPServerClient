@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #0088cc;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.updclient.UDPLoginController">
+    <Label layoutX="126.0" layoutY="27.0" text="Login" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+
+    <TextField fx:id="username" layoutX="20.0" layoutY="87.0" prefWidth="260.0" promptText="Enter your username" />
+
+    <Button fx:id="enterButton" layoutX="110.0" layoutY="141.0" mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: white; -fx-text-fill: #00a0d2; -fx-font-weight: bold;" text="ENTER" textAlignment="CENTER" />
+</AnchorPane>
