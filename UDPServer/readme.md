@@ -491,9 +491,10 @@ Lee un archivo y devuelve sus datos como un arreglo de bytes.
 ```
 
 ## Notas Importantes:
-Este código está diseñado para un entorno de red local y puede requerir ajustes según la configuración de red específica.
-Asegúrese de tener permisos adecuados para la lectura y escritura en la carpeta de destino de las imágenes.
-La interfaz de usuario puede ser mejorada para proporcionar una experiencia más amigable.
+
+- Este código está diseñado para un entorno de red local y puede requerir ajustes según la configuración de red específica.
+- Asegúrese de tener permisos adecuados para la lectura y escritura en la carpeta de destino de las imágenes.
+- La interfaz de usuario puede ser mejorada para proporcionar una experiencia más amigable.
 
 
 
