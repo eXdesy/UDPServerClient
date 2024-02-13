@@ -47,6 +47,16 @@ Este controlador maneja la lógica de la ventana de inicio de sesión.
     }
 ```
 
+- **Método `stopClient`**: Para el cliente.
+
+```
+    public static void stopClient() {
+        if (clientSocket != null && !clientSocket.isClosed()) {
+            clientSocket.close();
+        }
+    }
+```
+
 - **Método `verificarNombreUsuario`**:
   - Envía el nombre de usuario al servidor para su verificación.
   - Espera la respuesta del servidor y devuelve `true` si el nombre de usuario está disponible.
