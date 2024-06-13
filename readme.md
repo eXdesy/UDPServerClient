@@ -9,12 +9,13 @@ Esta aplicación de chat UDP Cliente está escrita en Java y utiliza JavaFX para
 ## Instrucciones de Uso:
 
 ### Configuración del Servidor:
+
+<img src="https://github.com/eXdesy/UDPServerClient/blob/master/img/Server_Interface.png" alt="Server_Interface" width="400"/>
+
 - **Interfaz de Usuario:**
 	- El servidor escucha en el puerto `5010`.
 	- Las imágenes recibidas se guardan en la ruta `C:\Users\Admin\Downloads\ServerImages`. (Cambiar si es necesario)
 	- La interfaz incluye una consola (consoleTextArea) que muestra mensajes relevantes del servidor.
-
-![Server_Interface](https://github.com/eXdesy/UDPServerClient/blob/master/img/Server_Interface.png)
 
 - **Conexión de Clientes:**
 	- Los clientes deben conectarse al servidor utilizando mensajes de verificación de nombre de usuario `CHECK_USERNAME`.
@@ -32,20 +33,20 @@ Esta aplicación de chat UDP Cliente está escrita en Java y utiliza JavaFX para
 
 ### Configuración del Cliente:
 
-![Client_Login](https://github.com/eXdesy/UDPServerClient/blob/master/img/Client_Login.png)
+<img src="https://github.com/eXdesy/UDPServerClient/blob/master/img/Client_Login.png" alt="Client_Login" width="400"/>
 
 - **Interfaz de Usuario:**
 	- El cliente escucha en el puerto `6010`.
 	- Las imágenes recibidas se guardan en la ruta `C:\Users\Admin\Downloads\ClientImages`. (Cambiar si es necesario)
 
-![Client_Chat](https://github.com/eXdesy/UDPServerClient/blob/master/img/Client_Chat.png)
+		<img src="https://github.com/eXdesy/UDPServerClient/blob/master/img/Client_Chat.png" alt="Client_Chat" width="400"/>
 
 - **Enviar Mensajes de Texto:**
 	- En la ventana principal, utiliza el cuadro de texto inferior para escribir tu mensaje.
 	- Haz clic en el botón "Enviar" para enviar el mensaje al servidor y a otros usuarios conectados.
 	- Tus mensajes se mostrarán en verde, mientras que los mensajes de otros usuarios se mostrarán en azul.
 
-![Client_Message](https://github.com/eXdesy/UDPServerClient/blob/master/img/Client_Message.png)
+		<img src="https://github.com/eXdesy/UDPServerClient/blob/master/img/Client_Message.png" alt="Client_Message" width="400"/>
 
 - **Enviar Imágenes:**
 
@@ -54,7 +55,7 @@ Esta aplicación de chat UDP Cliente está escrita en Java y utiliza JavaFX para
 	- La imagen se mostrará en la ventana de chat y se enviará al servidor y otros usuarios.
 	-  Tus imágenes se mostrarán en verde, mientras que las imágenes de otros usuarios se mostrarán en azul.
 
-![Client_Image](https://github.com/eXdesy/UDPServerClient/blob/master/img/Client_Image.png)
+		<img src="https://github.com/eXdesy/UDPServerClient/blob/master/img/Client_Image.png" alt="Client_Image" width="400"/>
 
 - **Ejecución:**
 	- Compile y ejecute `HelloApplication`.
