@@ -1,75 +1,1 @@
-# UDP Server & Client - Aplicación
-Esta aplicación de chat UDP Cliente está escrita en Java y utiliza JavaFX para la interfaz gráfica. La comunicación se realiza a través del protocolo UDP para el intercambio de mensajes y archivos de imagen.
-
-[VER PARTE TECNICA DEL CLIENTE](https://github.com/eXdesy/UDPServerClient/blob/master/UDPClient/readme.md)
-
-[VER PARTE TECNICA DEL SERVIDOR](https://github.com/eXdesy/UDPServerClient/blob/master/UDPServer/readme.md)
-
-
-## Instrucciones de Uso:
-
-### Configuración del Servidor:
-- **Interfaz de Usuario:**
-	- El servidor escucha en el puerto `5010`.
-	- Las imágenes recibidas se guardan en la ruta `C:\Users\Admin\Downloads\ServerImages`. (Cambiar si es necesario)
-	- La interfaz incluye una consola (consoleTextArea) que muestra mensajes relevantes del servidor.
-
-![Server_Interface](https://github.com/eXdesy/UDPServerClient/blob/master/img/Server_Interface.png)
-
-- **Conexión de Clientes:**
-	- Los clientes deben conectarse al servidor utilizando mensajes de verificación de nombre de usuario `CHECK_USERNAME`.
-
-- **Mensajes de Texto:**
-	- Los mensajes de texto enviados por los clientes se reenvían a todos los clientes conectados.
-
-- **Envío y Recepción de Imágenes:**
-	- Los clientes pueden enviar imágenes al servidor mediante mensajes específicos.
-	- El servidor reenvía las imágenes a todos los clientes conectados.
-
-- **Ejecución:**
-	- Compile y ejecute `UDPServer.java`.
-	- Asegúrese de tener la configuración del entorno y las dependencias adecuadas.
-
-### Configuración del Cliente:
-
-![Client_Login](https://github.com/eXdesy/UDPServerClient/blob/master/img/Client_Login.png)
-
-- **Interfaz de Usuario:**
-	- El cliente escucha en el puerto `6010`.
-	- Las imágenes recibidas se guardan en la ruta `C:\Users\Admin\Downloads\ClientImages`. (Cambiar si es necesario)
-
-![Client_Chat](https://github.com/eXdesy/UDPServerClient/blob/master/img/Client_Chat.png)
-
-- **Enviar Mensajes de Texto:**
-	- En la ventana principal, utiliza el cuadro de texto inferior para escribir tu mensaje.
-	- Haz clic en el botón "Enviar" para enviar el mensaje al servidor y a otros usuarios conectados.
-	- Tus mensajes se mostrarán en verde, mientras que los mensajes de otros usuarios se mostrarán en azul.
-
-![Client_Message](https://github.com/eXdesy/UDPServerClient/blob/master/img/Client_Message.png)
-
-- **Enviar Imágenes:**
-
-	- Haz clic en el botón "Enviar Imagen" para seleccionar un archivo de imagen desde tu dispositivo.
-	-  Selecciona la imagen deseada en el cuadro de diálogo.
-	- La imagen se mostrará en la ventana de chat y se enviará al servidor y otros usuarios.
-	-  Tus imágenes se mostrarán en verde, mientras que las imágenes de otros usuarios se mostrarán en azul.
-
-![Client_Image](https://github.com/eXdesy/UDPServerClient/blob/master/img/Client_Image.png)
-
-- **Ejecución:**
-	- Compile y ejecute `HelloApplication`.
-	- Asegúrese de tener la configuración del entorno y las dependencias adecuadas.
-
-## Notas Adicionales:
-- La dirección IP del servidor está predefinida en el código `IP = "192.168.0.18"`. Asegúrate de que sea la correcta para tu entorno.
-- El código también incluye la lógica para la recepción y envío de archivos de imagen a través del protocolo UDP.
-- Si encuentras algún problema, revisa la consola de tu IDE para mensajes de error.
-
-## ¡Disfruta del chat con UDP!
-
-
-
-
-
-
-
+# <h1 align="center">UDP SERVER</h1><p align="center">This project is **JavaFX**-based server that uses the **UDP protocol** to receive messages and images between different clients and forward them.<p><p align="center"><a href="https://aws.amazon.com/corretto/" target="_blank"><img src="https://img.shields.io/badge/SDK-Corretto_11.0.21-brightgreen" alt="Java Corretto Version" /></a><a href="https://maven.apache.org/" target="_blank"><img src="https://img.shields.io/badge/Build-Maven_3.8.1-blue" alt="Maven Version" /></a><a href="https://openjfx.io/" target="_blank"><img src="https://img.shields.io/badge/JavaFX-SDK_20.0.0-orange" alt="JavaFX Version" /></a><a href="https://www.jetbrains.com/idea/" target="_blank">  <img src="https://img.shields.io/badge/IntelliJ_IDEA-2023.1-brightgreen" alt="IntelliJ IDEA"></a></p>---## 🧪 Features and Functions### Messaging:<img src="https://github.com/eXdesy/UDPServerClient/blob/master/img/chat1.png" alt="Chat_1" width="400"/><img src="https://github.com/eXdesy/UDPServerClient/blob/master/img/chat2.png" alt="Chat_2" width="400"/>- Clients can send and receive text or image messages in real-time.- Each user is assigned a unique color for better readability.- Images are saved to a predefined `Downloads/ClientImages` folder for clients and `Downloads/ServerImages` folder for server.### Username Verification and Login:<img src="https://github.com/eXdesy/UDPServerClient/blob/master/img/login.png" alt="Login" width="400"/>- Ensures each username is unique and registers new users dynamically.### Server Logs:<img src="https://github.com/eXdesy/UDPServerClient/blob/master/img/server.png" alt="Server" width="400"/>- Real-time log updates ensure transparency in communication.---## 🚀 How to RunClone the repository and navigate to the project folder.   ```bash   git clone https://github.com/eXdesy/UDPServerClient.git   ```### Running the Server methods:1 - Run the server application `HelloApplication` from your IDE.2 - Use the compiled version:   ```bash   cd path/to/server   java -jar Server.jar   ```### Running the Client methods:1 - Run the client application `HelloApplication` from your IDE.2 - Use the compiled version:   ```bash   cd path/to/client   java -jar Client.jar   ```To add new chat, just copy the UDPClient and run it again with changed `CLIENT_PORT` in `LoginController` class---## 🛠 Key Components and Architecture### Server Side (UDPServer):- **ServerController.java**:  - Manages incoming and outgoing UDP connections.  - Forwards messages and images between clients.  - Logs all actions in the server interface for monitoring.  - Uses **`DatagramSocket`** for efficient UDP-based communication.- **InterfaceController.java**:  - Handles the graphical interface of the server.  - Displays logs, errors, and connection details in real-time.### Client Side (UDPClient):- **LoginController.java**:  - Allows users to enter their username.  - Verifies username availability via the server.- **ChatController.java**:  - Handles chat messages and file transfers.  - Implements logic to display images and text dynamically in the UI.---## 🤔 Troubleshooting### Common Issues:1. **Ports already in use**:   - Check that `SERVER_PORT` and `CLIENT_PORT` are free.2. **Connection issues**:   - Ensure both client and server are on the same network.   - Verify IP and port configurations in `LoginController`.

@@ -5,6 +5,6 @@ module com.updserver.updclient {
     requires org.kordamp.bootstrapfx.core;
     requires java.desktop;
 
-    opens com.updclient to javafx.fxml;
-    exports com.updclient;
+    opens com.client to javafx.fxml;
+    exports com.client;
 }

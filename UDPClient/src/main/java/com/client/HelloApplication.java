@@ -1,4 +1,4 @@
-package com.updclient;
+package com.client;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,12 +11,12 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("LoginWindow.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("CHAT 1");
+        Scene scene = new Scene(fxmlLoader.load(), 400, 300);
+        stage.setTitle("CHAT");
         stage.setScene(scene);
         stage.show();
 
-        stage.setOnCloseRequest(event -> UDPLoginController.stopClient());
+        stage.setOnCloseRequest(event -> LoginController.stopClient());
     }
 
     public static void main(String[] args) {

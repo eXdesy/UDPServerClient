@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.server.ServerController" style="-fx-background-color: #1e1e2f;">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <ScrollPane fx:id="scrollPane" fitToWidth="true" fitToHeight="true" hbarPolicy="NEVER" vbarPolicy="ALWAYS" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+        <TextFlow fx:id="chatHistoryTextFlow" prefHeight="400.0" prefWidth="500.0"
+                  style="-fx-background-color: #2e2e3f; -fx-font-size: 16px; -fx-border-color: #4e4e6f; -fx-border-width: 2px; -fx-border-radius: 10px; -fx-padding: 10px; -fx-text-fill: #ffffff; -fx-font-weight: bold;">
+        </TextFlow>
+    </ScrollPane>
+</VBox>

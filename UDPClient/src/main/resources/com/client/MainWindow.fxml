@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.client.ChatController" style="-fx-background-color: #1e1e2f;">
+    <padding>
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+    </padding>
+    <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="ALWAYS" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+        <TextFlow fx:id="chatHistoryTextFlow" prefHeight="400.0" prefWidth="500.0"
+                  style="-fx-background-color: #2e2e3f; -fx-font-size: 16px; -fx-border-color: #4e4e6f; -fx-border-width: 2px; -fx-border-radius: 10px; -fx-padding: 10px; -fx-text-fill: #ffffff; -fx-font-weight: bold;">
+        </TextFlow>
+    </ScrollPane>
+    <HBox spacing="10.0">
+        <TextField fx:id="messageInput" promptText="Type a message..."
+                   style="-fx-prompt-text-fill: #7f8c8d; -fx-background-color: #2e2e3f; -fx-font-size: 16px; -fx-border-color: #4e4e6f; -fx-border-width: 1.5px; -fx-border-radius: 10px; -fx-padding: 10px; -fx-text-fill: #ffffff; -fx-font-weight: bold;"
+                   HBox.hgrow="ALWAYS"/>
+        <Button text="File" onAction="#sendImageButton"
+                style="-fx-font-size: 16px; -fx-background-color: #34c6a1; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-padding: 10px 15px; -fx-border-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0.5, 0, 3);"/>
+        <Button text="Send" onAction="#sendMessageButton"
+                style="-fx-font-size: 16px; -fx-background-color: #5a9df4; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-border-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0.5, 0, 3);"/>
+    </HBox>
+</VBox>

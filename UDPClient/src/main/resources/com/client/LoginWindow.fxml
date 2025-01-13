@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane style="-fx-background-color: #1e1e2f;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.LoginController">
+    <VBox alignment="CENTER" spacing="20.0" AnchorPane.topAnchor="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <Label text="Welcome Back!" style="-fx-font-size: 24px; -fx-text-fill: #ffffff; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;" />
+        <TextField fx:id="username" promptText="Enter your username"
+                   style="-fx-background-color: #2e2e3f; -fx-font-size: 16px; -fx-border-color: #4e4e6f; -fx-border-width: 1.5px; -fx-border-radius: 10px; -fx-padding: 10px; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #7f8c8d;"
+                   VBox.vgrow="NEVER" />
+        <Button fx:id="enterButton" text="LOGIN"
+                style="-fx-font-size: 16px; -fx-background-color: #5a9df4; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-border-radius: 10px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0.5, 0, 3);"
+                VBox.vgrow="NEVER" />
+    </VBox>
+</AnchorPane>
