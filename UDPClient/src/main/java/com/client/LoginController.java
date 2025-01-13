@@ -17,7 +17,7 @@ public class LoginController {
     public static final int CLIENT_PORT = 6011; // Port for the client socket
     public static final int SERVER_PORT = 5010; // Port for the server socket
     public static final int BUFFER_SIZE = 1024; // Buffer size for UDP packets
-    public static final String SERVER_IP = "192.168.246.1"; // IP address of the server
+    public static final String SERVER_IP = ""; // IP address of the server
     public static DatagramSocket clientSocket; // Socket for client communication
 
     @FXML
